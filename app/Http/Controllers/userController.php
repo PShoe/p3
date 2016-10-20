@@ -6,16 +6,16 @@ use Illuminate\Http\Request;
 
 use p3\Http\Requests;
 
-class p3Controller extends Controller
+class userController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function user()
     {
-        return "I'll be a Lorem Ipsum generator!";
+        return view('layouts.user');
     }
 
     /**

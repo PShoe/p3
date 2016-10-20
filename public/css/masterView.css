@@ -1,0 +1,41 @@
+body {
+    background-image: url(../images/backgroundCoffee.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-color: #fffff;
+}
+
+a {
+    text-decoration: none;
+    color:white;
+}
+a:visited{
+    color:black;
+}
+a:hover{
+    color: white;
+}
+a:active{
+    color: black;
+}
+header{
+    text-align: center;
+    padding-top: 320px;
+    padding-bottom: 50px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+}
+h1{
+    font-size: 45px;
+    font-weight: bolder;
+}
+.nav-bar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 30%;
+    font-size: 25px;
+}
