@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 use p3\Http\Requests;
 
+// $generator = new Badcow\LoremIpsum\Generator();
+// $paragraphs = $generator->getParagraphs(5);
+// echo implode('<p>', $paragraphs);
+
+
+
 class loremController extends Controller
 {
     /**
