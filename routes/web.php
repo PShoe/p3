@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('layouts.masterView');
 });
 
-
+// LOREM ROUTES
 #show all lorem text
 Route::get('/lorem', 'loremController@index')->name('lorem.index');
 #show form to create lorem text
@@ -23,10 +23,10 @@ Route::get('/lorem/create', 'loremController@create')->name('lorem.create');
 #process form to create lorem text
 Route::post('/lorem', 'loremController@store')->name('lorem.store');
 
-
-#show all lorem info
+// USER ROUTES
+#show all user info
 Route::get('/user', 'userController@index')->name('user.index');
-#show form to create lorem info
+#show form to create user info
 Route::get('/user/create', 'userController@create')->name('user.create');
 #process form to create user info
 Route::post('/user', 'userController@store')->name('user.store');
@@ -34,7 +34,6 @@ Route::post('/user', 'userController@store')->name('user.store');
 
 
 Route::get('/debugbar', function() {
-
     $data = Array('foo' => 'bar');
     Debugbar::info($data);
     Debugbar::info('Current environment: '.App::environment());
@@ -43,7 +42,6 @@ Route::get('/debugbar', function() {
     Debugbar::addMessage('Another message', 'mylabel');
 
     return 'Just demoing some of the features of Debugbar';
-
 });
 
 Route::get('/random', function() {
