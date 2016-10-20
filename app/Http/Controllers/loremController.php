@@ -1,10 +1,10 @@
 <?php
 
-namespace p3\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use p3\Http\Requests;
+use App\Http\Requests;
 
 // $generator = new Badcow\LoremIpsum\Generator();
 // $paragraphs = $generator->getParagraphs(5);
@@ -19,7 +19,7 @@ class loremController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function lorem()
+    public function index()
     {
         return view('layouts.lorem');
     }

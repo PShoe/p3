@@ -1,10 +1,10 @@
 <?php
 
-namespace p3\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use p3\Http\Requests;
+use App\Http\Requests;
 
 class userController extends Controller
 {
@@ -13,7 +13,7 @@ class userController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function user()
+    public function index()
     {
         return view('layouts.user');
     }

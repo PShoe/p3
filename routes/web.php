@@ -15,8 +15,23 @@ Route::get('/', function () {
     return view('layouts.masterView');
 });
 
-Route::get('/lorem', 'LoremController@lorem');
-Route::get('/user', 'UserController@user');
+
+#show all lorem text
+Route::get('/lorem', 'loremController@index')->name('lorem.index');
+#show form to create lorem text
+Route::get('/lorem/create', 'loremController@create')->name('lorem.create');
+#process form to create lorem text
+Route::post('/lorem', 'loremController@store')->name('lorem.store');
+
+
+#show all lorem info
+Route::get('/user', 'userController@index')->name('user.index');
+#show form to create lorem info
+Route::get('/user/create', 'userController@create')->name('user.create');
+#process form to create user info
+Route::post('/user', 'userController@store')->name('user.store');
+
+
 
 Route::get('/debugbar', function() {
 
