@@ -5,6 +5,7 @@ body {
     background-position: center;
     background-size: cover;
     background-color: #fffff;
+    margin-bottom: 40px;
 }
 
 a {
@@ -15,21 +16,26 @@ a:visited{
     color:black;
 }
 a:hover{
-    color: white;
+    color: #e4efa1;
 }
 a:active{
     color: black;
 }
 header{
     text-align: center;
-    padding-top: 450px;
+    padding-top: 325px;
     padding-bottom: 50px;
     font-family: 'Cormorant Garamond', serif;
     font-weight: bold;
 }
-h1{
+.home {
     font-size: 45px;
     font-weight: bolder;
+    color:#303e1c;
+}
+.home:hover{
+    font-size: 45px;
+    color: #303e1c;
 }
 .nav-bar {
     list-style: none;
@@ -38,4 +44,23 @@ h1{
     display: inline-block;
     width: 30%;
     font-size: 25px;
+}
+.button {
+    border-radius: 4px;
+    webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    margin-left:33%;
+}
+.button:hover {
+    background-color: #bf6048; /* Greenish */
+    color: white; /*reddish*/
+
+}
+p {
+    color: #e4efa1;
+    margin-left:33%;
+}
+h2 {
+    color: #303e1c;
+    margin-left: 33%;
 }

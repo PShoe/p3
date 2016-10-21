@@ -21,7 +21,7 @@ class loremController extends Controller
      */
     public function index()
     {
-        return view('layouts.lorem');
+        return view('layouts.loremShow');
     }
 
     /**
@@ -31,7 +31,7 @@ class loremController extends Controller
      */
     public function create()
     {
-        //
+        return view('layouts.loremCreate');
     }
 
     /**

@@ -10,28 +10,22 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-
+// HOME ROUTES
 Route::get('/', function () {
     return view('layouts.masterView');
 });
 
 // LOREM ROUTES
-#show all lorem text
-Route::get('/lorem', 'loremController@index')->name('lorem.index');
 #show form to create lorem text
 Route::get('/lorem/create', 'loremController@create')->name('lorem.create');
-#process form to create lorem text
+#process form to create lorem text & display text
 Route::post('/lorem', 'loremController@store')->name('lorem.store');
 
 // USER ROUTES
-#show all user info
-Route::get('/user', 'userController@index')->name('user.index');
 #show form to create user info
 Route::get('/user/create', 'userController@create')->name('user.create');
-#process form to create user info
+#process form to create user info & display generated users
 Route::post('/user', 'userController@store')->name('user.store');
-
-
 
 Route::get('/debugbar', function() {
     $data = Array('foo' => 'bar');
@@ -40,7 +34,6 @@ Route::get('/debugbar', function() {
     Debugbar::error('Error!');
     Debugbar::warning('Watch out…');
     Debugbar::addMessage('Another message', 'mylabel');
-
     return 'Just demoing some of the features of Debugbar';
 });
 

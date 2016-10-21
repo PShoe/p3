@@ -15,7 +15,7 @@ class userController extends Controller
      */
     public function index()
     {
-        return view('layouts.user');
+        return view('layouts.userShow');
     }
 
     /**
@@ -25,7 +25,7 @@ class userController extends Controller
      */
     public function create()
     {
-        //
+        return view('layouts.userCreate');
     }
 
     /**
