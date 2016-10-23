@@ -27,6 +27,11 @@ Route::get('/user/create', 'userController@create')->name('user.create');
 #process form to create user info & display generated users
 Route::post('/user', 'userController@store')->name('user.store');
 
+
+
+
+
+
 Route::get('/debugbar', function() {
     $data = Array('foo' => 'bar');
     Debugbar::info($data);

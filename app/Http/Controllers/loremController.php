@@ -21,7 +21,6 @@ class loremController extends Controller
      */
     public function index()
     {
-        return view('layouts.loremShow');
     }
 
     /**
@@ -42,7 +41,8 @@ class loremController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $howManyParas = $request->input('howManyParas');
+        return view('layouts.loremShow');
     }
 
     /**

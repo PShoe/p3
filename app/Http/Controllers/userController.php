@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use p3\Http\Requests;
 
+// use Faker\Factory;
+
 class userController extends Controller
 {
     /**
@@ -15,7 +17,6 @@ class userController extends Controller
      */
     public function index()
     {
-        return view('layouts.userShow');
     }
 
     /**
@@ -34,11 +35,59 @@ class userController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+    public function store(Request $request){
 
+        #Validate the request
+        $this->validate($request, [
+            'howManyUsers' => 'required|numeric|max:50|min:1',
+        ]);
+
+        #Generate user data with Faker package
+
+        $howManyUsers = $request->input('howManyUsers');
+        $add_birthday = $request->input('add_birthday');
+        $add_address = $request->input('add_address');
+
+        #Logic with Faker package
+
+        $faker = \Faker\Factory::create();
+
+        $data = '';
+
+        for($i = 0; $i < $howManyUsers; $i++){
+
+            if ($howManyUsers){
+                $name= $faker->name;
+            }
+
+            if ($howManyUsers != 0){
+
+                if($add_birthday){
+                    $monthName= $faker->monthName($max = 'now');
+                    $dayOfMonth= $faker->dayOfMonth($max = 'now');
+                    // echo date("Y") - 20;
+                    // $year=$faker->year($max = date("Y") - 20);
+                    $year=$faker->year($max = '-18 years');
+                    $birthday = $monthName . ' ' . $dayOfMonth . ' ' . $year;
+                }
+                else {
+                    $birthday= NULL;
+                }
+
+            if ($howManyUsers != 0){
+                if($add_address){
+                    $streetAddress= $faker->streetAddress;
+                }
+                else{
+                    $streetAddress= NULL;
+                }
+            }
+
+            $data .= "\n" . $name . "\n" . $streetAddress . "\n" . $birthday . "\n";
+        }
+    }
+    return view('layouts.userShow')->with('data',$data);
+    }
     /**
      * Display the specified resource.
      *

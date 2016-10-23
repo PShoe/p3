@@ -12,13 +12,13 @@ a {
     text-decoration: none;
     color:white;
 }
-a:visited{
+h1 a:visited{
     color:black;
 }
-a:hover{
+h1 a:hover{
     color: #e4efa1;
 }
-a:active{
+h1 a:active{
     color: black;
 }
 header{
@@ -45,22 +45,33 @@ header{
     width: 30%;
     font-size: 25px;
 }
+.nav-bar a:link{
+    color:#778a60;
+}
+.nav-bar a:hover{
+    color: #a3c080;
+}
 .button {
-    border-radius: 4px;
-    webkit-transition-duration: 0.4s; /* Safari */
+    border-radius: 10px;
+    webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
-    margin-left:33%;
+    background-position: center;
+    background-color: #5a434f;
+    color:white;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 100%;
+    padding:10px 20px;
+    margin: 10px;
 }
 .button:hover {
-    background-color: #bf6048; /* Greenish */
-    color: white; /*reddish*/
-
+    background-color: #bf6048;
+    color: white;
 }
-p {
-    color: #e4efa1;
-    margin-left:33%;
+section {
+    text-align: center;
+    padding:10px;
+    font-size: 20px;
 }
-h2 {
-    color: #303e1c;
-    margin-left: 33%;
+section h2 {
+    color: black;
 }
