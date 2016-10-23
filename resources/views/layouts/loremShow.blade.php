@@ -1,5 +1,7 @@
 @extends('layouts.masterView')
 
 @section('content')
-<h2>This should be the lorem show page</h2>
+<h2>Look at your lorem:</h2>
+<p>{!! nl2br(e($paragraphs)) !!}</p>
+<a href="lorem/create"><input class='button' type="submit"  value='Generate more lorem'></a>
 @endsection

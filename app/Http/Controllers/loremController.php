@@ -41,8 +41,17 @@ class loremController extends Controller
      */
     public function store(Request $request)
     {
+
+        $this->validate($request, [
+            'howManyParas' => 'required|numeric|max:20|min:1',
+        ]);
+
         $howManyParas = $request->input('howManyParas');
-        return view('layouts.loremShow');
+
+        $generator = new \Badcow\LoremIpsum\Generator();
+        $paragraphs = $generator->getParagraphs($howManyParas);
+        $paragraphs= implode("\n\n", $paragraphs);
+        return view('layouts.loremShow')->with('paragraphs',$paragraphs);
     }
 
     /**
