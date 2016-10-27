@@ -3,6 +3,15 @@
 @section('content')
 <h2>Create some users!</h2>
 
+
+@if(count($errors) > 0)
+    <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+@endif
+
 <form method="POST" action="/user">
     {{ csrf_field() }}
     <p class='userform'>

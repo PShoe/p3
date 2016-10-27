@@ -41,7 +41,6 @@ class loremController extends Controller
      */
     public function store(Request $request)
     {
-
         $this->validate($request, [
             'howManyParas' => 'required|numeric|max:20|min:1',
         ]);

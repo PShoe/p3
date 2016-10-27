@@ -2,6 +2,15 @@
 
 @section('content')
 <h2>How many Lorem-ipsum paragraphs do you need?</h2>
+
+@if(count($errors) > 0)
+    <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+@endif
+
 <p>
 <form method="POST" action="/lorem">
     {{ csrf_field() }}
